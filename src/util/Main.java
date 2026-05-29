@@ -1,5 +1,3 @@
-// Tells Java this file belongs to the "com.cms" package.
-// All our files live under com.cms.* so they can find each other.
 package util;
 
 import exception.ContactNotFoundException;
@@ -13,7 +11,7 @@ import manager.LinkedListContactManager;
 
 import model.Contact;
 
-// Standard Java classes: List for storing contacts,
+// List for storing contacts,
 // Scanner for reading user input from the keyboard.
 import java.util.List;
 import java.util.Scanner;
