@@ -1,6 +1,6 @@
-package DataStructure_OOP_Final_Project.src.manager;
+package manager;
 
-import DataStructure_OOP_Final_Project.src.exception.InvalidPhoneNumberException;
+import exception.InvalidPhoneNumberException;
 /**
  * Base class that holds shared logic for the three concrete managers.
  * Right now that's just phone number validation.

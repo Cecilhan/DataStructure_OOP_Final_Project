@@ -1,10 +1,10 @@
-package DataStructure_OOP_Final_Project.src.manager;
+package manager;
 
-import DataStructure_OOP_Final_Project.src.model.Contact;
+import model.Contact;
 import java.util.List;
-import DataStructure_OOP_Final_Project.src.exception.ContactNotFoundException;
-import DataStructure_OOP_Final_Project.src.exception.DuplicateContactException;
-import DataStructure_OOP_Final_Project.src.exception.InvalidPhoneNumberException;
+import exception.ContactNotFoundException;
+import exception.DuplicateContactException;
+import exception.InvalidPhoneNumberException;
 
 /**
  * The contract every contact manager must follow.

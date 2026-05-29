@@ -1,4 +1,4 @@
-package com.cms.model;
+package model;
 /**
  * Contact - holds the info for one person.
  */
