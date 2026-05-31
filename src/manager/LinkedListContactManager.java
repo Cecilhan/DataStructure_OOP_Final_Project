@@ -13,7 +13,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Contact manager that uses a LinkedList to store contacts.
+ * Contact manager that uses a LinkedList to store contacts
  */
 public class LinkedListContactManager extends AbstractContactStorage {
 

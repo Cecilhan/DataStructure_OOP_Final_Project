@@ -27,7 +27,7 @@ public class BenchmarkUtility {
     };
     private static final String[] CATS = { "Family", "Friend", "Work", "Other" };
 
-    /** Build n random contacts with unique phone numbers. */
+    /** Build n random contacts with unique phone numbers */
     public static List<Contact> generate(int n) {
         Random rand = new Random(42); // fixed seed for reproducibility
         List<Contact> result = new ArrayList<>(n);
@@ -42,7 +42,7 @@ public class BenchmarkUtility {
         return result;
     }
 
-    /** Run all 4 operations on all 3 data structures for the given size. */
+    /** Run all 4 operations on all 3 data structures for the given size */
     public static void runBenchmark(int size) {
         System.out.println();
         System.out.println("=========================================");
@@ -76,7 +76,7 @@ public class BenchmarkUtility {
         printResult("REMOVE", size, alRem, llRem, hmRem);
     }
 
-    // ---- the four timing methods ----
+    //Timing method
 
     private static long timeAdd(ContactManager m, List<Contact> data) {
         m.clear();
@@ -132,7 +132,7 @@ public class BenchmarkUtility {
         System.out.println("  -> Fastest: " + winner);
     }
 
-    /** The static Big-O comparison table. */
+    /** The static Big-O comparison table */
     public static void printComplexityTable() {
         System.out.println();
         System.out.println("===============================================");

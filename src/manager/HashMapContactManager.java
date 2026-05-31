@@ -15,8 +15,9 @@ import java.util.Map;
 import java.util.Iterator;
 
 /**
- * Contact manager that uses a HashMap with the phone number as key.
- * This gives us O(1) lookups, which is the whole point of the comparison.
+ * HashMapContactManager uses a HashMap to store contacts
+ * Stores contacts as key-value pairs where the phone number is the key
+ * Name-based operations still require a full scan since names are not keys
  */
 public class HashMapContactManager extends AbstractContactStorage {
 
