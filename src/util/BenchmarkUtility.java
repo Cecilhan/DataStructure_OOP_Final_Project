@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * All benchmark-related stuff in one file:
+ * All benchmark related stuff in one file:
  *  - generate random contacts
  *  - time each operation
  *  - print result tables
@@ -42,7 +42,7 @@ public class BenchmarkUtility {
         return result;
     }
 
-    /** Run all 4 operations on all 3 data structures for the given size */
+    /** run all 4 operations on all 3 data structures for the given size */
     public static void runBenchmark(int size) {
         System.out.println();
         System.out.println("=========================================");
