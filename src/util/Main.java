@@ -28,12 +28,12 @@ public class Main {
     // three concrete classes — this is polymorphism
     private static ContactManager manager = new ArrayListContactManager();
 
-    // One Scanner shared by every input method below.
-    // We read everything from System.in (the keyboard).
+    // One Scanner shared by every input method below
+    // We read everything from System.in (the keyboard)
     private static Scanner scanner = new Scanner(System.in);
 
-    // Counter for new contact IDs. We start at 1 and add 1 each time
-    // a new contact is created so every contact has a unique ID.
+    // Counter for new contact IDs, we start at 1 and add 1 each time
+    // a new contact is created so every contact has a unique ID
     private static int nextId = 1;
 
     /**
@@ -47,13 +47,13 @@ public class Main {
         System.out.println(" (comparing ArrayList, LinkedList, HashMap)");
         System.out.println("=========================================");
 
-        // running == false will stop the menu loop and end the program.
+        // running == false will stop the menu loop and end the program
         boolean running = true;
 
-        // Keep looping until the user picks "Exit".
+        // Keep looping until the user picks "Exit"
         while (running) {
 
-            // Show the menu options to the user.
+            // Show the menu options to the user
             showMenu();
 
             // Read the user's number choice (1-10).
@@ -61,10 +61,10 @@ public class Main {
 
             // try/catch wraps the whole switch so that any error (bad
             // input, missing contact, etc.) shows a friendly message
-            // instead of crashing the program.
+            // instead of crashing the program
             try {
 
-                // Run the matching action based on the user's choice.
+                // Run the matching action based on the user's choice
                 switch (choice) {
                     case 1: addContact();    break;  // option 1: add
                     case 2: removeContact(); break;  // option 2: remove
@@ -119,7 +119,6 @@ public class Main {
     }
 
     // the 9 menu actions
-
     /**
      * Asks the user for each field and creates a new Contact.
      */

@@ -13,7 +13,7 @@ import exception.InvalidPhoneNumberException;
 public interface ContactManager {
 
     void addContact(Contact c)
-            throws DuplicateContactException, InvalidPhoneNumberException;
+        throws DuplicateContactException, InvalidPhoneNumberException;
 
     void removeContact(String phone) throws ContactNotFoundException;
 
