@@ -1,45 +1,80 @@
-This contact management system involve 3 data structure which is `LinkedList`, `ArrayList`, and `HashMap`. The program lets you add, remove, edit, search, and sort contacts, and measures side-by-side to see how their performance compares
+## Contact Management System (CMS)
 
-# Project Structure
-src/
-├── model/
-│   └── Contact.java                    
-├── manager/
-│   ├── ContactManager.java             
-│   ├── AbstractContactStorage.java     
-│   ├── LinkedListContactManager.java   
-│   ├── ArrayListContactManager.java    
-│   └── HashMapContactManager.java      
-├── exception/
-│   ├── ContactNotFoundException.java
-│   ├── DuplicateContactException.java
-│   └── InvalidPhoneNumberException.java
-└── util/
-    ├── Main.java                        
-    └── BenchmarkUtility.java            
+## Overview
+Contact Management System is a Java-based console application developed for final project for a Data Structures and OOP. The system allows users to store, manage, and organize contact information such as names, phone numbers, emails, addresses, and categories 
+---
+## Features
 
-# How to run Project
-1. Open terminal
-2. Navigate to the src folder and compile all the project files
-3. Run the Program
+- **Add Contact** — Create a new contact with name, phone number, email, address, and category
+- **Delete Contact** — Remove an existing contact 
+- **Search Contact** — Look up a contact by nname and phone number
+- **Update Contact** — Edit Name and email
+- **View All Contacts** — Display the full contact list in a formatted output
+---
 
-# Menu
- 1.  Add Contact           — prompts for name, phone, email, address, category
- 2.  Remove Contact        — removes by exact phone number
- 3.  Edit Contact          — updates name and email for a given phone
- 4.  Search Contact        — finds a contact by exact phone number
- 5.  Display All Contacts  — lists every stored contact
- 6.  Sort Alphabetically   — sorts by name (note: case-insensitive)
- 7.  Run Benchmark         
- 8.  Show Time Complexity  — prints the static Big-O table
- 9.  Switch Data Structure — swaps between different data structure
-10.  Search by Name        
-11.  Remove by Name       
-12.  Exit
+## Requirement to run this program
+Make sure you have the following installed before running the project:
+
+| Requirement | Version | Download |
+|---|---|---|
+| Java Development Kit (JDK) | 11 or higher | [https://www.oracle.com/java/](https://www.oracle.com/java/) |
+| Visual Studio Code | Latest | [https://code.visualstudio.com/](https://code.visualstudio.com/) |
+| VS Code Extension Pack for Java | Latest | Search `vscjava.vscode-java-pack` in Extensions |
+
+## How to Run
+
+### Using Visual Studio Code (Recommended)
+
+1. **Clone or extract** the project folder:
+   ```bash
+   git clone https://github.com/your-username/DataStructure_OOP_Final_Project.git
+   ```
+   Or extract the `.zip` file directly.
+
+2. **Open** the project folder in VS Code:
+   ```
+   File → Open Folder → Select "DataStructure_OOP_Final_Project-master"
+   ```
+3. **Run the project:**
+   - Open the main entry-point Java file (e.g., `Main.java`) in `src/`
+   - Click the **Run** button at the top right
+---
+
+## Usage Guide
+
+Once the program is running, you will be presented with a menu. Navigate using the number keys:
+
+```
+========================================
+       CONTACT MANAGEMENT SYSTEM
+========================================
+[1] Add New Contact
+[2] View All Contacts
+[3] Search Contact
+[4] Update Contact
+[5] Delete Contact
+[0] Exit
+========================================
+Enter your choice: _
 ```
 
+### Adding a Contact
 
+When prompted, enter the following details:
 
+```
+Enter Name   : John Doe
+Enter Phone  : 081234567890
+Enter Email  : johndoe@email.com
+Enter Address: Jl. Merdeka No. 10, Jakarta
+Enter Category: Friend
+```
 
+### Contact Output Format
 
+Each contact is displayed as:
+
+```
+| John Doe | 081234567890 | johndoe@email.com | Jl. Merdeka No. 10, Jakarta | Friend
+```
 
