@@ -115,7 +115,7 @@ public class BenchmarkUtility {
         return System.nanoTime() - start;
     }
 
-    // ---- pretty printing ----
+    // pretty printing
 
     private static void printResult(String op, int size, long al, long ll, long hm) {
         System.out.println();
@@ -132,7 +132,7 @@ public class BenchmarkUtility {
         System.out.println("  -> Fastest: " + winner);
     }
 
-    /** The static Big-O comparison table */
+    /* The static Big-O comparison table */
     public static void printComplexityTable() {
         System.out.println();
         System.out.println("   TIME COMPLEXITY ANALYSIS");
