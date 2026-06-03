@@ -137,7 +137,7 @@ public class Main {
         // nextId++ uses the current value, THEN increments it.
         Contact c = new Contact(nextId++, name, phone, email, address, category);
 
-        // try to add it and the manager will throw if the phone is
+        // Try to add it. The manager will throw if the phone is
         // duplicate or invalid.
         try {
             manager.addContact(c);

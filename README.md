@@ -45,16 +45,13 @@ Make sure you have the following installed before running the project:
 Once the program is running, you will be presented with a menu. Navigate using the number keys:
 
 ```
-========================================
        CONTACT MANAGEMENT SYSTEM
-========================================
 [1] Add New Contact
 [2] View All Contacts
 [3] Search Contact
 [4] Update Contact
 [5] Delete Contact
 [0] Exit
-========================================
 Enter your choice: _
 ```
 
