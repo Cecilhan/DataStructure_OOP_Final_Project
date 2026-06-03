@@ -1,9 +1,9 @@
-package DataStructure_OOP_Final_Project.src.manager;
+package manager;
 
-import DataStructure_OOP_Final_Project.src.exception.ContactNotFoundException;
-import DataStructure_OOP_Final_Project.src.exception.DuplicateContactException;
-import DataStructure_OOP_Final_Project.src.exception.InvalidPhoneNumberException;
-import DataStructure_OOP_Final_Project.src.model.Contact;
+import exception.ContactNotFoundException;
+import exception.DuplicateContactException;
+import exception.InvalidPhoneNumberException;
+import model.Contact;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,7 +13,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Contact manager that uses a LinkedList to store contacts.
+ * Contact manager that uses a LinkedList to store contacts
  */
 public class LinkedListContactManager extends AbstractContactStorage {
 

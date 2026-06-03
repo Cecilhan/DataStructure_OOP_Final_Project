@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package DataStructure_OOP_Final_Project.src.model;
+=======
+package model;
+>>>>>>> de675be6f1301161a4fe123aefc487f9091371e1
 /**
  * Contact - holds the info for one person.
  */
