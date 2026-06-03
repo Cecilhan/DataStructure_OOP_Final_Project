@@ -118,7 +118,7 @@ public class Main {
         
     }
 
-    // -------- the 9 menu actions --------
+    // the 9 menu actions
 
     /**
      * Asks the user for each field and creates a new Contact.
@@ -203,7 +203,7 @@ public class Main {
     }
 
     /**
-     * Prints every contact currently stored.
+    Prints every contact currently stored.
      */
     private static void displayAll() {
         // Ask the manager for all the contacts.
