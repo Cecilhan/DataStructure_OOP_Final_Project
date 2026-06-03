@@ -135,7 +135,6 @@ public class BenchmarkUtility {
     /** The static Big-O comparison table */
     public static void printComplexityTable() {
         System.out.println();
-        System.out.println("===============================================");
         System.out.println("   TIME COMPLEXITY ANALYSIS");
         System.out.println("===============================================");
         System.out.println();
