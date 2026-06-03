@@ -1,4 +1,4 @@
-package com.cms.model;
+package DataStructure_OOP_Final_Project.src.model;
 /**
  * Contact - holds the info for one person.
  */
