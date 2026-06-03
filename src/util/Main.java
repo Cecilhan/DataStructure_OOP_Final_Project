@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Main class. This is where the program starts.
+ * Main class
  * It shows a menu, reads the user's choice, and calls the right method.
  */
 public class Main {
@@ -25,15 +25,15 @@ public class Main {
     // The "active" manager. We can change this at runtime when the user
     // picks option 9 (Switch Data Structure). Because the type is the
     // INTERFACE (ContactManager), the same variable can hold any of the
-    // three concrete classes — this is polymorphism in action.
+    // three concrete classes — this is polymorphism
     private static ContactManager manager = new ArrayListContactManager();
 
-    // One Scanner shared by every input method below.
-    // We read everything from System.in (the keyboard).
+    // One Scanner shared by every input method below
+    // We read everything from System.in (the keyboard)
     private static Scanner scanner = new Scanner(System.in);
 
-    // Counter for new contact IDs. We start at 1 and add 1 each time
-    // a new contact is created so every contact has a unique ID.
+    // Counter for new contact IDs, we start at 1 and add 1 each time
+    // a new contact is created so every contact has a unique ID
     private static int nextId = 1;
 
     /**
@@ -41,30 +41,30 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        // Print a welcome banner so the user knows what they opened.
+        // Print a welcome text so the user knows what they opened.
         System.out.println("=========================================");
         System.out.println(" Contact Management System");
         System.out.println(" (comparing ArrayList, LinkedList, HashMap)");
         System.out.println("=========================================");
 
-        // running == false will stop the menu loop and end the program.
+        // running == false will stop the menu loop and end the program
         boolean running = true;
 
-        // Keep looping until the user picks "Exit".
+        // Keep looping until the user picks "Exit"
         while (running) {
 
-            // Show the menu options to the user.
+            // Show the menu options to the user
             showMenu();
 
             // Read the user's number choice (1-10).
             int choice = readInt("Choice: ");
 
-            // try/catch wraps the whole switch so that ANY error (bad
+            // try/catch wraps the whole switch so that any error (bad
             // input, missing contact, etc.) shows a friendly message
-            // instead of crashing the program.
+            // instead of crashing the program
             try {
 
-                // Run the matching action based on the user's choice.
+                // Run the matching action based on the user's choice
                 switch (choice) {
                     case 1: addContact();    break;  // option 1: add
                     case 2: removeContact(); break;  // option 2: remove
@@ -87,7 +87,7 @@ public class Main {
             }
         }
 
-        // Loop ended → say goodbye and close the scanner.
+        // Loop ended → say goodbye and close the scanner
         System.out.println("Goodbye!");
         scanner.close();
     }
@@ -118,15 +118,14 @@ public class Main {
         
     }
 
-    // -------- the 9 menu actions --------
-
+    // the 9 menu actions
     /**
      * Asks the user for each field and creates a new Contact.
      */
     private static void addContact() {
         System.out.println("-- Add Contact --");
 
-        // Read each piece of info from the user. readLine() returns
+        // Read each piece of info from the user, readLine() returns
         // whatever the user types before pressing Enter.
         String name     = readLine("Name:     ");
         String phone    = readLine("Phone:    ");
@@ -144,13 +143,13 @@ public class Main {
             manager.addContact(c);
             System.out.println("Contact added.");
         } catch (DuplicateContactException | InvalidPhoneNumberException e) {
-            // Show the user what went wrong, then return to the menu.
+            // show the user what went wrong, then return to the menu.
             System.out.println("Cannot add: " + e.getMessage());
         }
     }
 
     /**
-     * Removes a contact by phone number.
+     removes a contact by phone number.
      */
     private static void removeContact() {
         // Ask the user which phone number to remove.
@@ -167,18 +166,18 @@ public class Main {
     }
 
     /**
-     * Edits an existing contact's name and email.
+     * edit an existing contact's name and email.
      */
     private static void editContact() {
-        // Phone number identifies the contact (phone is the unique key).
+        // Phone number identifies the contact (phone is the unique key)
         String phone = readLine("Phone of contact to edit: ");
 
-        // Ask for the new name and email.
+        // Ask for the new name and email
         String newName  = readLine("New name:  ");
         String newEmail = readLine("New email: ");
 
         try {
-            // Try to update; manager throws if phone doesn't exist.
+            // Try to update; manager throws if phone doesnt exist
             manager.editContact(phone, newName, newEmail);
             System.out.println("Updated.");
         } catch (ContactNotFoundException e) {
@@ -187,10 +186,10 @@ public class Main {
     }
 
     /**
-     * Looks up a contact by phone number and prints it.
+     * loks up a contact by phone number and prints it
      */
     private static void searchContact() {
-        // Ask the user for the phone number to look up.
+        // Ask the user for the phone number to look up
         String phone = readLine("Phone to search: ");
 
         try {
@@ -203,19 +202,19 @@ public class Main {
     }
 
     /**
-     * Prints every contact currently stored.
+    prints every contact currently stored
      */
     private static void displayAll() {
-        // Ask the manager for all the contacts.
+        // ask the manager for all the contacts
         List<Contact> all = manager.getAll();
 
-        // If there are no contacts, say so and return.
+        // if there are no contacts, say so and return
         if (all.isEmpty()) {
-            System.out.println("No contacts yet.");
+            System.out.println("No contacts yet");
             return;
         }
 
-        // Otherwise print how many there are, then each contact.
+        // otherwise print how many there are, then each contact
         System.out.println("Total: " + all.size());
         for (Contact c : all) {
             System.out.println(c);  // uses Contact.toString()
@@ -223,12 +222,12 @@ public class Main {
     }
 
     /**
-     * Sorts contacts alphabetically by name, then prints them.
+     * sorts contacts alphabetically by name, then prints them
      */
     private static void sortContacts() {
-        // Tell the manager to sort. The List-based managers sort in
-        // place; the HashMap manager just sorts a copy (it can't keep
-        // a meaningful order).
+        // tell the manager to sort. The List-based managers sort in
+        // place, the HashMap manager just sorts a copy (it can't keep
+        // an  order)
         manager.sort();
         System.out.println("Sorted.");
         // Show the (now sorted) list.
@@ -236,26 +235,26 @@ public class Main {
     }
 
     /**
-     * Runs the full benchmark for a size the user picks.
+     * runs the full benchmark for a size the user picks
      */
     private static void runBenchmark() {
-        // Show the standard sizes from the project spec.
+        // show the standard sizes from the project spec
         System.out.println("Pick a size: 100, 1000, 10000, or 100000");
         int size = readInt("Size: ");
 
         // 100,000 is very slow with the linear data structures because
-        // their cost grows as O(n^2). Warn the user before running it.
+        // their cost grows as O(n^2). so tell the user before running it
         if (size >= 100000) {
             System.out.println("Heads up: at this size the test can take");
             System.out.println("several minutes. Press Ctrl+C to cancel.");
         }
 
-        // Hand off to the utility class which does all the timing.
+        // Hand off to the utility class which does all the timing
         BenchmarkUtility.runBenchmark(size);
     }
 
     /**
-     * Lets the user pick which data structure to use as the active manager.
+     * Lets the user pick which data structure to use as the active manager
      */
     private static void switchStructure() {
         System.out.println("Pick a data structure:");
@@ -264,9 +263,9 @@ public class Main {
         System.out.println(" 3. HashMap");
         int pick = readInt("Choice: ");
 
-        // Replace the active manager based on the choice.
-        // This is polymorphism: the variable type doesn't change,
-        // only the concrete class behind it.
+        // replace the active manager based on the choice
+        // this is polymorphism: the variable type doesn't change,
+        // only the concrete class behind it
         switch (pick) {
             case 1: manager = new ArrayListContactManager();  break;
             case 2: manager = new LinkedListContactManager(); break;
@@ -276,7 +275,7 @@ public class Main {
                 return;
         }
 
-        // Reset the ID counter since the new manager starts empty.
+        // reset the ID counter since the new manager starts empty
         nextId = 1;
         System.out.println("Now using: " + manager.getName());
     }
@@ -284,7 +283,7 @@ public class Main {
     // -------- input helpers --------
 
     /**
-     * Prints the prompt, reads one line of text from the user, returns it.
+     * prints the prompt, reads one line of text from the user, returns it.
      */
     private static String readLine(String prompt) {
         System.out.print(prompt);          // show prompt (no newline)
@@ -292,7 +291,7 @@ public class Main {
     }
 
     /**
-     * Like readLine but parses the input as a number. Keeps asking
+     * like readLine but parses the input as a number. Keeps asking
      * until the user types a valid integer.
      */
     private static int readInt(String prompt) {

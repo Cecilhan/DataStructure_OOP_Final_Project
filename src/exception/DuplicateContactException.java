@@ -1,8 +1,7 @@
-// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
 package exception;
 
 public class DuplicateContactException extends Exception {
-   public DuplicateContactException(String var1) {
-      super(var1);
-   }
+    public DuplicateContactException(String message) {
+        super(message);
+    }
 }
