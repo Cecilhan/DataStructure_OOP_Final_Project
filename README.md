@@ -75,3 +75,7 @@ Each contact is displayed as:
 | John Doe | 081234567890 | johndoe@email.com | Jl. Merdeka No. 10, Jakarta | Friend
 ```
 
+### Video Demo Google Drive Link: 
+```
+https://drive.google.com/file/d/1ynuSu9SmtdKw0EmzJzb-o0CyuUK5n9I7/view?usp=drive_link
+```
